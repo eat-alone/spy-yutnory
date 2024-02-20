@@ -574,7 +574,7 @@ const props = defineProps({
 
 ### 📌DB 설계 (ERD)
 
-![ERD](/images/ERD (1).png)
+![ERD](/images/ERD.png)
 
 ## 💻실제 화면
 
