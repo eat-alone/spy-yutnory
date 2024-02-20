@@ -570,11 +570,11 @@ const props = defineProps({
 
 ### 📌아키텍처 설계
 
-![system.drawio](/uploads/19ec72502e78fbdb63f8a886bb8ea577/system.drawio.png)
+![system.drawio](/images/system.drawio.png)
 
 ### 📌DB 설계 (ERD)
 
-![ERD](/uploads/65a9590cdbbf1a6775460d6dc24bbcaf/ERD.png)
+![ERD](/images/ERD(1).png)
 
 ## 💻실제 화면
 
