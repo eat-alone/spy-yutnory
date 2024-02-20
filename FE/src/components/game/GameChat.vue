@@ -115,7 +115,7 @@ export default {
   flex-direction: column-reverse;
   overflow-y: scroll;
   height: 20vh;
-  margin-left: 20px;
+  margin-left: 10px;
   scrollbar-width: thin;
   scrollbar-color: #888 transparent;
 }

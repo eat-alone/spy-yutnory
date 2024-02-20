@@ -327,7 +327,7 @@ export default {
     // 이메일 중복 체크
     emailCheck() {
       const userStore = useUserStore();
-      userStore.emailCheck(this.email);
+      return userStore.emailCheck(this.email);
     },
     nickCheck() {
       const userStore = useUserStore();
@@ -344,8 +344,8 @@ export default {
       let flag = re.test(this.email) || this.email === "";
 
       if (flag && this.email !== "") {
-        this.emailCheck();
         const userStore = useUserStore();
+        userStore.emailCheck(this.email);
         if (!userStore.isEmailCheck) {
           flag = false;
           this.emailMsg = "이메일이 중복되었습니다.";
@@ -372,8 +372,8 @@ export default {
     isValidNickname() {
       let flag = this.nickname.length >= 3 || this.nickname === "";
       if (flag && this.nickname !== "") {
-        this.nickCheck();
         const userStore = useUserStore();
+        userStore.nickCheck(this.nickname);
         if (!userStore.isNickCheck) {
           flag = false;
           this.nickMsg = "닉네임이 중복되었습니다.";

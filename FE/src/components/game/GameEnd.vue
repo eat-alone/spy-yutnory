@@ -11,15 +11,10 @@ import { useUserStore } from "@/store/userStore";
 import { useGameStore } from "@/store/gameStore";
 
 export default {
-  props: {
-    winMessage: Number,
-  },
   computed: {
     text() {
-      if(this.winMessage === useGameStore().myTeam)
-        return "승리";
-      else
-        return "패배";
+      const gameStore = useGameStore();
+      return gameStore.resText;
     },
   },
   methods: {

@@ -18,6 +18,7 @@
 </template>
   
   <script>
+  import { useMiniGameStore } from "@/store/miniGameStore";
 export default {
   data() {
     return {
@@ -30,6 +31,15 @@ export default {
       selectedCard: null,
       selectedCardValue: null,
     };
+  },
+  computed:{
+    isShowCardSelect(){
+      const miniStore = useMiniGameStore();
+      if(miniStore.isShowCardSelect){
+        this.shuffleCards();
+      }
+      return miniStore.isShowCardSelect;
+    }
   },
   methods: {
     shuffleCards() {

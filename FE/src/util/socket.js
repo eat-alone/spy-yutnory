@@ -233,6 +233,8 @@ function gameHandleRecvMessage(receivedMsg) {
 // 게임 시작 전 유저, 말 저장.
 // 초기 정보 저장
 function setInfo(receivedMsg) {
+  // 게임 진행
+  useGameStore().gameStatus = true;
   // 우리팀의 스파이
   useGameStore().mySpyId = receivedMsg.mySpyUnitId;
   // 힌트

@@ -430,16 +430,39 @@ export default {
           }
           this.warningMessage = this.warningMessage + "말이 도착하였습니다.";
           if (newVal.spy) {
+            // 게임 종료
+            gameStore.gameStatus = false;
             this.warningMessageSecond =
               newVal.team === 1
                 ? this.redHorses[spyIndex].name
                 : this.blueHorses[spyIndex].name +
                   "말이 밀정이여서 게임이 종료되었습니다!!";
             this.isShowWarningMessage = true;
-            setTimeout(() => {
-              this.isShowWarningMessage = false;
-              gameStore.spyGoal = true;
-            }, 2000);
+
+            // 윷 결과 보내기.
+            if (gameStore.isThrowYut) {
+              const msg = {
+                team: newVal.team === 1 ? 2 : 1,
+              };
+
+              socketSend(
+                `/pub/game/${useUserStore().currentRoomInfo.roomCode}/finish`,
+                msg
+              );
+            }
+
+            // 결과 텍스트
+            if (gameStore.myTeam === newVal.team){
+              gameStore.resText = "패배";
+            }else{
+              gameStore.resText = "승리";
+            }
+
+              setTimeout(() => {
+                this.isShowWarningMessage = false;
+                gameStore.spyGoal = true;
+              }, 2000);
+
           } else {
             this.isShowWarningMessage = true;
             setTimeout(() => {

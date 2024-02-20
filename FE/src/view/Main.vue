@@ -94,18 +94,18 @@ export default {
       }
     })
 
-    onMounted(() => {
-      // 새로고침 할 때 소켓 재연결
-      const userString = localStorage.getItem('user')
-      if (userString) {
-        const user = JSON.parse(userString)
-        if (user && user.accessToken)
-        connectWebSocket(user.accessToken).then(() => {
-        }).catch((error) => {
-          console.error("WebSocket 재연결 실패:", error);
-        })
-      }
-    })
+    // onMounted(() => {
+    //   // 새로고침 할 때 소켓 재연결
+    //   const userString = localStorage.getItem('user')
+    //   if (userString) {
+    //     const user = JSON.parse(userString)
+    //     if (user && user.accessToken)
+    //     connectWebSocket(user.accessToken).then(() => {
+    //     }).catch((error) => {
+    //       console.error("WebSocket 재연결 실패:", error);
+    //     })
+    //   }
+    // })
 
 
     return {

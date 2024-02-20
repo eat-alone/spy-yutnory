@@ -30,7 +30,7 @@ async function logout(success, fail) {
 // 이메일 중복 체크
 async function emailCheck(param, success, fail) {
   console.log(param);
-  await local.post(`/user/email/${param}`).then(success).catch(fail);
+  await local.get(`/user/email/${param}`).then(success).catch(fail);
 }
 // 닉네임 중복 체크
 async function nickCheck(param, success, fail) {
