@@ -24,7 +24,7 @@ public class JWTUtil {
 
     private final UserRepository userRepository;
 
-    private static final long ACCESS_TOKEN_VALIDITY_SECONDS = 15 * 60 * 1000L; // 15분
+    private static final long ACCESS_TOKEN_VALIDITY_SECONDS = 12 * 60 * 60 * 1000L; // 15분
     private static final long REFRESH_TOKEN_VALIDITY_SECONDS = 12 * 60 * 60 * 1000L; // 12시간
 
     public JWTUtil(@Value("${spring.jwt.secret}")String secret, UserRepository userRepository){
