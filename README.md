@@ -14,10 +14,12 @@
 - 경쟁과 협력이 공존하는 게임으로 서로 간의 유대감 증진이 가능하다.
 
 ### 📌기술 스택
+<div>
 <img src="https://img.shields.io/badge/html5-E34F26?style=flat&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/css-1572B6?style=flat&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/vite-646CFF?style=flat&logo=vite&logoColor=white">
-<img src="https://img.shields.io/badge/vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white">
+<img src="https://img.shields.io/badge/vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white">  
+</div>
 <br>
 <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white">
 <img src="https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat&logo=spring-security&logoColor=white">
